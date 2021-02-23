@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans-Regular';
+    box-sizing: border-box;
+}
+
+
+/*Importando fonts*/
+
+@font-face {
+    font-family: 'Open Sans-Regular';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans-Bold';
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans-Light';
+    src: url('../fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans-Lightitalic';
+    src: url('../fonts/Open_Sans/OpenSans-LightItalic.ttf');
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*Div container para centralizar os elementos*/
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/*Div para limpar os floats do elementos a cima para não afetar os elementos de baixo*/
+
+.clear {
+    clear: both;
+}
+
+
+/*******CABEÇALHO********/
+
+header {
+    width: 100%;
+    height: 90vh;
+    min-height: 800px;
+    padding: 40px 2%;
+    background-size: cover;
+    background-position: top;
+    background-image: url('../imgs/teclado7.jpg');
+}
+
+
+/********LOGO CABEÇALHO***********/
+
+header .logo {
+    width: 240px;
+    height: 90px;
+    position: relative;
+    top: -20px;
+    float: left;
+    background-image: url('../imgs/logo1.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/********MENU***********/
+
+
+/*cabeçalho atacando todos as duas navs*/
+
+header nav {
+    float: right;
+}
+
+
+/*nav menu mobile*/
+
+header nav.mobile-menu {
+    display: none;
+    width: 45px;
+    height: 45px;
+    background-image: url('../imgs/icone-menu.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+
+/*Lista da nav menu mobile*/
+
+header nav.mobile-menu ul {
+    display: none;
+    transition: 1s;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    background-color: #5ff4f4;
+}
+
+
+/*itens da lista da nav menu mobile*/
+
+header nav.mobile-menu ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+}
+
+
+/*links da lista da nav menu mobile*/
+
+header nav.mobile-menu ul li a {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*Menu-fixo ao descer o scroll*/
+
+.menu-fixo {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.menu-fixo ul {
+    list-style: none;
+    float: right;
+    margin: 15px 150px 0 0;
+}
+
+.menu-fixo ul li {
+    float: left;
+    padding: 0 20px;
+}
+
+.menu-fixo ul li a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.menu-fixo ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*MENU DESKTOP**/
+
+header nav.desktop-menu {
+    position: relative;
+    top: 10px;
+}
+
+
+/*Lista menu desktop*/
+
+header nav.desktop-menu ul {
+    list-style: none;
+}
+
+
+/*Itens menu desktop*/
+
+header nav.desktop-menu li {
+    float: left;
+    padding: 0 20px;
+}
+
+
+/*links dentro dos itens menu desktop*/
+
+header nav.desktop-menu ul li a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+
+/*Efeito ao passar o mouse no menu desktop*/
+
+header nav.desktop-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/********CHAMADA 1 INICIAL************/
+
+
+/*Div contendo o texto*/
+
+.chamada1 {
+    max-width: 600px;
+    float: right;
+    margin: 150px 140px;
+}
+
+
+/*Titulo da div*/
+
+.chamada1 h2 {
+    font-size: 40px;
+    color: #ccc;
+}
+
+
+/*Parágrafo da div*/
+
+.chamada1 p {
+    font-size: 15px;
+    color: #ccc;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+/**********SECTION**********************/
+
+
+/*Tag section*/
+
+section.sessao1 {
+    width: 100%;
+    background-color: #3399ff;
+    padding: 0 2%;
+    height: 100%;
+    max-height: 450px;
+}
+
+
+/*Container da secção*/
+
+section.sessao1 .container {
+    max-width: 1000px;
+    height: calc(100% + 30px);
+}
+
+
+/*Texto da secção*/
+
+.texto-sessao1 {
+    position: relative;
+    left: 55px;
+    float: left;
+    width: 50%;
+    margin-top: 90px;
+    padding-left: 80px;
+    color: rgb(220, 220, 220);
+}
+
+
+/*Titulo h2 dentro da secção*/
+
+.texto-sessao1 h2 {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/*Paragrafo da secção*/
+
+.texto-sessao1 p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/*Lista da secção*/
+
+.texto-sessao1 ul {
+    font-size: 15px;
+    list-style: outside;
+    padding-left: 15px;
+}
+
+
+/*itens da lista*/
+
+.texto-sessao1 ul li {
+    float: left;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+/*Botão abaixo da lista*/
+
+.btn1-texto {
+    background-color: #FF703D;
+    width: 165px;
+    height: 44px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 20px;
+}
+
+
+/*Link do botão*/
+
+.btn1-texto a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Foto do iphone*/
+
+.device-sessao1 {
+    position: relative;
+    top: -30px;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-image: url('../imgs/iphone-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/****************SESSÃO 2**************************/
+
+
+/*Container da sessao 2*/
+
+section .container {
+    max-width: 1000px;
+}
+
+
+/*Tag sessao*/
+
+section.sessao2 {
+    padding: 40px 2% 0 2%;
+    background-color: white;
+    text-align: center;
+}
+
+
+/*Titulo da sessao*/
+
+section.sessao2 h2 {
+    color: rgb(130, 130, 130);
+    font-weight: 300;
+}
+
+
+/*Texto sessao 2*/
+
+section.sessao2 p {
+    display: inline-block;
+    margin-top: 30px;
+    max-width: 900px;
+    color: rgb(130, 130, 130);
+}
+
+
+/*Imagem ladding page*/
+
+section.sessao2 img {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 1px 1px 0px 0px rgb(230, 230, 230);
+}
+
+
+/********************SESSAO 3********************************/
+
+
+/*Tag section da sessao 3*/
+
+section.sessao3 {
+    width: 100%;
+}
+
+
+/*Div parte 1 dentro da sessao 3*/
+
+section.sessao3 .parte1 {
+    float: left;
+    width: 50%;
+    padding: 140px 0 90px 0;
+    color: black;
+    background-color: #3399ff;
+}
+
+
+/*texto a esquerda dentro da sessao 3*/
+
+section.sessao3 .wraper-parte1 {
+    float: right;
+    max-width: 500px;
+    padding: 0 30px;
+    color: rgb(220, 220, 220);
+}
+
+
+/*Titulo do texto do bloco a esquerda*/
+
+section.sessao3 .parte1 h2 {
+    font-family: 'Open Sans-Lightitalic';
+    font-size: 23px;
+}
+
+
+/*Texto bloco a esquerda*/
+
+section.sessao3 .parte1 p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+
+/*SECTION DIV A DIREITA*/
+
+section.sessao3 .parte2 {
+    float: left;
+    width: 50%;
+    padding: 140px 0 90px 0;
+}
+
+
+/*DIV ENGLOBA TITULO IMAGEM E PARAGRAFO*/
+
+section.sessao3 .sobre-autor {
+    float: left;
+    max-width: 600px;
+    padding-left: 30px;
+}
+
+
+/*TITULO*/
+
+section.sessao3 .titulo-autor {
+    float: left;
+    width: 100%;
+}
+
+
+/*DIV QUE ENGLOBA O TITULO E TEXTO*/
+
+section.sessao3 .wraper-titulo-autor {
+    float: left;
+}
+
+
+/*TITULO*/
+
+section.sessao3 .titulo-autor h2 {
+    color: #232323;
+    font-weight: 400;
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+
+/*PARAGRAFO*/
+
+section.sessao3 .titulo-autor p {
+    font-size: 15px;
+    color: #232323;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+/*IAMGEM*/
+
+section.sessao3 .img-autor {
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    border-radius: 40px;
+    background-image: url('../imgs/foto-menor.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+
+/*DIV CONTENDO O TEXTO DA DIREITA*/
+
+section.sessao3 .texto-autor {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/*ATACANDO DIRETAMENTO O TEXTO DA DIV A DIREITA*/
+
+section.sessao3 .texto-autor p {
+    color: #232323;
+    font-size: 15px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+
+/*Div que contem as bolinhas para slider*/
+
+section.sessao3 .slider-bullets {
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+    padding-left: 30px;
+}
+
+
+/*BOLINHAS PARA FAZER O EVENTOS EM JAVASCRIPT*/
+
+section.sessao3 .slider-bullets span {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+
+/********************SESSAO 4***************************/
+
+section.sessao4 {
+    background-color: #0080ff;
+    padding: 100px 0;
+}
+
+section.sessao4 .formulario {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    color: white;
+}
+
+section.sessao4 form {
+    margin-top: 15px;
+}
+
+section.sessao4 .formulario h2 {
+    font-size: 23px;
+    font-weight: 300;
+}
+
+section.sessao4 .formulario p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+    max-width: 400px;
+}
+
+section.sessao4 .formulario input[type=text] {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 8px;
+    height: 58px;
+    padding-left: 8px;
+    line-height: 58px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+section.sessao4 .formulario textarea {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 8px;
+    padding: 15px;
+    height: 160px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+section.sessao4 .formulario input[type=submit] {
+    width: 165px;
+    height: 44px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 18px;
+    background-color: #FF703D;
+    color: white;
+}
+
+section.sessao4 .map-wraper {
+    float: left;
+    width: 50%;
+    padding: 0 10px 0 20px;
+}
+
+section.sessao4 .map-wraper2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 100%;
+    width: 100%;
+}
+
+section.sessao4 .map-wraper3 {
+    width: 100%;
+    margin-top: 15px;
+    max-width: 480px;
+    position: relative;
+}
+
+section.sessao4 .map-wraper h2 {
+    font-size: 23px;
+    font-weight: 300;
+    color: white;
+}
+
+section.sessao4 .map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 5px solid rgb(200, 200, 200);
+}
+
+
+/********************************FOOTER(RODAPE)**********************/
+
+
+/*Atacando a tag footer*/
+
+footer {
+    padding: 40px 2%;
+    color: #ccc;
+    background-color: #192113;
+}
+
+
+/*Atacando a primeira tag p*/
+
+footer p:nth-of-type(1) {
+    float: left;
+    font-size: 14px;
+}
+
+
+/*Atacando a segunda tag p*/
+
+footer p:nth-of-type(2) {
+    float: right;
+    font-size: 14px;
+}
+
+
+/************************MEDIA QUERYS****************************/
+
+@media screen and (max-width: 740px) {
+    header {
+        width: 100%;
+        height: auto;
+        min-height: 90vh;
+        padding: 40px 2%;
+    }
+    /*Esconde menu desktop*/
+    header nav.desktop-menu {
+        display: none;
+    }
+    /*Exibe menu desktop*/
+    header nav.mobile-menu {
+        display: block;
+    }
+    /*Evento ao passar o mouse no icone o menu aparece*/
+    /*header nav.mobile-menu:hover ul{
+		display: inline-block;
+	}*/
+    /*Cor nos itens da lista*/
+    header nav.mobile-menu ul li:hover {
+        background-color: #a0f8f8;
+    }
+    header nav.menu-fixo {
+        display: none;
+    }
+    /*TEXTO HEADER*/
+    .chamada1 {
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin: 120px 0 0 0;
+    }
+    /*
+	/*Titulo da div*/
+    .chamada1 h2 {
+        font-weight: 300;
+        font-size: 30px;
+        padding: 0 10px;
+        color: white;
+    }
+    /*Parágrafo da div*/
+    .chamada1 p {
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: justify;
+        color: #ccc;
+    }
+    /*Sessão responsiva*/
+    section.sessao1 {
+        padding: 40px 2%;
+        height: auto;
+        text-align: center;
+    }
+    /*Texto sessao*/
+    .texto-sessao1 {
+        display: inline-block;
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+        position: static;
+        float: none;
+    }
+    /*lista*/
+    .texto-sessao1 ul {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    /*Itens da lista*/
+    .texto-sessao1 ul li {
+        float: none;
+        text-align: left;
+    }
+    /*Botão laranjado*/
+    .btn1-texto {
+        display: inline-block;
+    }
+    /*Imagem do iphone*/
+    .device-sessao1 {
+        display: none;
+    }
+    section.sessao4 .container {
+        text-align: center;
+    }
+    section.sessao4 .formulario {
+        width: 100%;
+    }
+    section.sessao4 .formulario p {
+        display: inline-block;
+        float: none;
+    }
+    section.sessao4 .map-wraper {
+        width: 100%;
+        margin-top: 30px;
+        float: none;
+        padding: 0 8%;
+    }
+    section.sessao4 .map-wraper2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 0;
+    }
+    section.sessao4 .map-wraper3 {
+        display: inline-block;
+        margin-top: 10px;
+        width: 80%;
+        padding-top: 80%;
+        max-width: none;
+        position: relative;
+    }
+    section.sessao4 input[type=submit] {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    section.sessao3 .parte1 {
+        width: 100%;
+        padding: 40px 0;
+    }
+    section.sessao3 .parte2 {
+        width: 100%;
+        padding: 40px 0;
+    }
+    section.sessao2 img {
+        top: 30px;
+        margin-top: 20px;
+    }
+    section.sessao4 .formulario {
+        padding: 0 2%;
+    }
+    footer {
+        text-align: center;
+    }
+    footer p:nth-of-type(1) {
+        float: none;
+    }
+    footer p:nth-of-type(2) {
+        float: none;
+        margin-top: 8px;
+    }
+}
