@@ -136,11 +136,36 @@
             <!--INICIO DA DIV SOBRE AUTOR -->
             <div class='sobre-autor'>
 
-                <div class='titulo-autor'>
+                <div class='titulo-autor '>
 
                     <div class='wraper-titulo-autor'>
 
                         <h2>Pablo Cassiano</h2>
+                        <p>Um pouco sobre mim:</p>
+                    </div>
+                    <!--FIM DA DIV WRAPER TITULO AUTOR-->
+
+                    <div class='img-autor'></div>
+
+                </div>
+                <!--FIM DA DIV TITULO AUTOR-->
+
+                <div class='texto-autor'>
+
+                    <p>Sou formnado em Analise Desenvolvimento de sistemas, com foco em desenvolvimento Web, apaixonado em progrmação. Tenho facilidade de prendizado, me relaciono e trabalho bem em equipe tornando o ambiente harmonico e agradavél. Tenho
+                        a meta de atrabalhar em uma grande empresa colaborar com meus conhecimentos fazendo-a crescer e adquirir conhecimento e expericência pra abrir meu próprio négocio na área de Tecnologia.</p>
+
+                </div>
+                <!--FIM DA DIV TEXTO AUTOR-->
+
+            </div>
+            <div class='sobre-tecnologia ds-none'>
+
+                <div class='titulo-autor'>
+
+                    <div class='wraper-titulo-autor'>
+
+                        <h2>Tecnologias</h2>
                         <p>Desenvolvedor Back-End e Front-End</p>
                     </div>
                     <!--FIM DA DIV WRAPER TITULO AUTOR-->
@@ -152,21 +177,50 @@
 
                 <div class='texto-autor'>
 
-                    <p>Densenvolvedor FullStack a mais de 3 anos, formado em Analise Desenvolvimento de Sistemas. Trabalho como freelance fazendo Lojas Virtuais, Landing Pages e Sistemas diversos.</p>
+                    <p>Densenvolvedor FullStack a mais de 3 anos, formado em Analise Desenvolvimento de Sistemas. Trabalho como freelance fazendo Lojas Virtuais, Landing Pages e Sistemas diversos, usando tecnologias como Front-end <b>HTML, CSS, JAVASCRIPT, BOOTSTRAP</b>e
+                        no Back-end <b>PHP, MYSQL, LARAVEL</b> com todas essas tecnologias é o suficiente para contruir um site agradavél e dinâmico para a safistação do cliente.</p>
 
                 </div>
                 <!--FIM DA DIV TEXTO AUTOR-->
 
             </div>
+            <div class='sobre-experiencia ds-none'>
+
+                <div class='titulo-autor'>
+
+                    <div class='wraper-titulo-autor'>
+
+                        <h2>Experiências</h2>
+                        <p>Um pouco de minhas experiências</p>
+                    </div>
+                    <!--FIM DA DIV WRAPER TITULO AUTOR-->
+
+                    <div class='img-autor'></div>
+
+                </div>
+                <!--FIM DA DIV TITULO AUTOR-->
+
+                <div class='texto-autor'>
+
+                    <p>Eu comecei durante a faculdade como estágiario em suporte, depois mudei para estágio em desenvolvimento javascript onde fiquei por 6 meses, após o estágio entrei em uma agência remotamente em que eu desenvolvia e dava manutenção em
+                        projetos legados, enquanto está na agência fazia alguns freelas como lojas viruais e lading pages, apóis um tempo como freela me ocnsolidei em uma empresa física de tecnoligia.</p>
+
+                </div>
+                <!--FIM DA DIV TEXTO AUTOR-->
+
+            </div>
+
             <!--FIM DA DIV SOBRE AUTOR-->
 
             <div class='slider-bullets'>
-                <span style='background-color: rgb(120, 120, 120);'></span>
-                <span></span>
-                <span></span>
+                <span class="bullets1 active"></span>
+                <span class="bullets2"></span>
+                <span class="bullets3"></span>
             </div>
 
         </div>
+
+
         <!--FIM DA DIV PARTE 2-->
 
         <div class='clear'></div>
@@ -272,6 +326,75 @@
                     menu.addClass('desktop-menu');
 
                 }
+            });
+
+            $(".bullets1").on("click", function() {
+
+                $(".sobre-autor").removeClass("ds-none");
+                $(".sobre-tecnologia").addClass("ds-none");
+                $(".sobre-experiencia").addClass("ds-none");
+
+                if ($(this).is("active")) {
+
+                    //Sobre autor
+                    $(".bullets2").removeClass("active");
+                    $(".bullets3").removeClass("active");
+
+
+                } else {
+
+                    $(this).addClass("active");
+                    $(".bullets2").removeClass("active");
+                    $(".bullets3").removeClass("active");
+
+
+
+                }
+
+            });
+
+            $(".bullets2").on("click", function() {
+
+                $(".sobre-tecnologia").removeClass("ds-none");
+                $(".sobre-autor").addClass("ds-none");
+                $(".sobre-experiencia").addClass("ds-none");
+
+                if ($(this).is("active")) {
+
+                    //Tecnologia
+
+                    $(".bullets2").addClass("active");
+                    $(".bullets1").removeClass("active");
+                    $(".bullets3").removeClass("active");
+
+                } else {
+
+                    $(this).addClass("active");
+                    $(".bullets1").removeClass("active");
+                    $(".bullets3").removeClass("active");
+                }
+
+            });
+            $(".bullets3").on("click", function() {
+
+                $(".sobre-experiencia").removeClass("ds-none");
+                $(".sobre-autor").addClass("ds-none");
+                $(".sobre-tecnologia").addClass("ds-none");
+
+
+                if ($(this).is("active")) {
+
+                    //Experiencia
+                    $(".bullets1").removeClass("active");
+                    $(".bullets2").removeClass("active");
+
+                } else {
+
+                    $(this).addClass("active");
+                    $(".bullets1").removeClass("active");
+                    $(".bullets2").removeClass("active");
+                }
+
             });
 
         });

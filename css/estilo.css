@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+.ds-none {
+    display: none;
+}
+
+.active {
+    background-color: rgb(120, 120, 120) !important;
+}
+
 
 /*Importando fonts*/
 
@@ -439,13 +447,15 @@ section.sessao3 .parte1 p {
 section.sessao3 .parte2 {
     float: left;
     width: 50%;
-    padding: 140px 0 90px 0;
+    padding: 140px 0 0 0;
 }
 
 
 /*DIV ENGLOBA TITULO IMAGEM E PARAGRAFO*/
 
-section.sessao3 .sobre-autor {
+section.sessao3 .sobre-autor,
+.sobre-experiencia,
+.sobre-tecnologia {
     float: left;
     max-width: 600px;
     padding-left: 30px;
