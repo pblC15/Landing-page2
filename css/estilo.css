@@ -362,6 +362,7 @@ section.sessao2 {
     padding: 40px 2% 0 2%;
     background-color: white;
     text-align: center;
+    position: realtive;
 }
 
 
@@ -385,12 +386,39 @@ section.sessao2 p {
 
 /*Imagem ladding page*/
 
-section.sessao2 img {
+section.sessao2 .p1 img {
     position: relative;
     top: 80px;
     width: 100%;
     margin-top: 10px;
     box-shadow: 1px 1px 0px 0px rgb(230, 230, 230);
+}
+
+.setas-imgs {
+    display: flex;
+    position: absolute;
+    top: 1700px;
+    left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.setas-imgs .setas-content:nth-of-type(1) {
+    margin-left: 150px;
+}
+
+.setas-imgs .setas-content:nth-of-type(2) {
+    margin-right: 150px;
+}
+
+.setas-imgs .setas-content img {
+    width: 50px;
+    height: 50px;
+    margin: 0 2%;
+    cursor: pointer;
 }
 
 

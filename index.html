@@ -100,17 +100,34 @@
 
     <!--INICIO DA SESSAO 2-->
     <section class='sessao2'>
-
+        <h2>Projetos Práticos</h2>
         <!--Centralizando elementos-->
-        <div class='container'>
-            <h2>Desenvolvimento de Landing pages</h2>
-            <p>Landing Page construida com intuito academico para aprimorar as habilidades em HTML, CSS e PHP para enviar o email. Marca e logo ficticias feitas para modelar o site e acrescentar uma identidade a ele. Nessa Landing Page foram feitas um cabeçalho
-                com duas logo marcas, uma sessão com uma imagem de fundo e com um formuáario a direita para entrar em contato. Na parte de baixo, mostrei um pouco do que seria por dentro do resort, com suites, praias, comidas, e hotel. No final eu coloquei
-                o rodapé com as logo morcas e informações da empresa.</p>
-            <img src='imgs/lading.jpg'>
+        <div id="p1" class='container p1 ds-none'>
+            <p>Projeto feito para fins acadêmicos, representando uma rede de restaurante fictícia. Tecnologias usadas para a contrução dessas lading page foi feita com <b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP</b>. A estrutura da página contém dois headers,
+                um menu, mensagem inicial, sessão sobre o restaurante, sessão com os melhores pratos do restaurante, sessão com o depoimentos dos clientes, sessão de contato e um roda pé.</p>
+            <img src='imgs/lading2.jpg'>
+        </div>
+        <div id="p2" class='container p1'>
+            <p>Lading page básica representando um rede de hoteis e viagens fictícia para fins acadêmicos com um visual clean para não encomodar o usuário ao nevegar pelo site. Marca e logo do site foi feita para acrescentar uma identidade ao site. Nessa
+                Landing Page foram feitas um cabeçalho com duas logo marcas, uma sessão com uma imagem de fundo e com um formulário a direita para entrar em contato. Na parte de baixo, mostrei um pouco do que seria por dentro do resort, com suites, praias,
+                comidas, e hotel. No final eu coloquei o rodapé com as logo morcas e informações da empresa. </p>
+            <img src='imgs/lading1.jpg'>
+        </div>
+        <div id="p3" class='container p1 ds-none'>
+            <p>Esté projeto é uma plataforma para divulgação de vagas de empregos em geral. Foi contruído com as tecnologias <b>HTML, CSS, JAVASCRIPT, JQUERY, PHP, MYSQL</b> com o intuito de ajudar as pessoas a se encontrar no mercado de trabalho, a plataforma
+                tem uma estrutura com header, login, menu, as vagas mais recentes, na lateral tem um barra de procurar pelo nome, banners e uma área em que o usuário enterressado em receber email com a caregoria da vaga desejada mais recente, por ultimo
+                foi feito o roda pé da platarforma, contem também o detalhe da vaga, anuciar vagas e uma área sobre as notícias do momento fazendo com que o usuário tenha uma experiência de se informar dentro do site.</p>
+            <img src=' imgs/lading3.jpg'>
         </div>
         <!--FIM DA DIV CONTAINER-->
-
+        <div class="setas-imgs">
+            <div class="setas-content arrow1">
+                <img src="imgs/arrow-left2.png" />
+            </div>
+            <div class="setas-content arrow2">
+                <img src="imgs/arrow-right2.png" />
+            </div>
+        </div>
     </section>
     <!--FIM DA SESSÃO 2-->
 
@@ -136,7 +153,7 @@
             <!--INICIO DA DIV SOBRE AUTOR -->
             <div class='sobre-autor'>
 
-                <div class='titulo-autor '>
+                <div class='titulo-autor'>
 
                     <div class='wraper-titulo-autor'>
 
@@ -306,28 +323,49 @@
             });
 
             //Função ao clicar no menu-mobile ele aparece o menu 
-            $('.mobile-menu').click(function() {
-                $('.mobile-menu ul').toggle();
+            $('.mobile-menu ').click(function() {
+                $('.mobile-menu ul ').toggle();
             });
 
             //Função para fixar o menu as descer o scroll
-            var menu = $('#menu-desktop');
+            var menu = $('#menu-desktop ');
 
             $(window).scroll(function() {
 
                 if ($(this).scrollTop() > 30) {
 
-                    menu.addClass('menu-fixo');
-                    menu.removeClass('desktop-menu');
+                    menu.addClass('menu-fixo ');
+                    menu.removeClass('desktop-menu ');
 
                 } else {
 
-                    menu.removeClass('menu-fixo');
-                    menu.addClass('desktop-menu');
+                    menu.removeClass('menu-fixo ');
+                    menu.addClass('desktop-menu ');
 
                 }
             });
 
+            //Função para mudar de slides
+
+
+
+            $(".arrow2").on("click", function() {
+
+                $(".p1").each(function(index, element) {
+
+                    if ($(".p1").is("ds-none")) {
+                        $(this).removeClass("ds-none");
+                        $(this).next().addClass("ds-none")
+                    }
+
+
+                });
+
+            });
+
+            //
+
+            //Sobre autor
             $(".bullets1").on("click", function() {
 
                 $(".sobre-autor").removeClass("ds-none");
@@ -336,10 +374,9 @@
 
                 if ($(this).is("active")) {
 
-                    //Sobre autor
+
                     $(".bullets2").removeClass("active");
                     $(".bullets3").removeClass("active");
-
 
                 } else {
 
@@ -347,12 +384,10 @@
                     $(".bullets2").removeClass("active");
                     $(".bullets3").removeClass("active");
 
-
-
                 }
 
             });
-
+            //Tecnologia
             $(".bullets2").on("click", function() {
 
                 $(".sobre-tecnologia").removeClass("ds-none");
@@ -361,7 +396,7 @@
 
                 if ($(this).is("active")) {
 
-                    //Tecnologia
+
 
                     $(".bullets2").addClass("active");
                     $(".bullets1").removeClass("active");
@@ -375,6 +410,7 @@
                 }
 
             });
+            //Experiencia
             $(".bullets3").on("click", function() {
 
                 $(".sobre-experiencia").removeClass("ds-none");
@@ -384,7 +420,7 @@
 
                 if ($(this).is("active")) {
 
-                    //Experiencia
+
                     $(".bullets1").removeClass("active");
                     $(".bullets2").removeClass("active");
 
@@ -396,6 +432,8 @@
                 }
 
             });
+
+
 
         });
     </script>
